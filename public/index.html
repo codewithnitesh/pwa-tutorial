@@ -5,13 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Food Ninja</title>
   <!-- materialize icons, css & js -->
-  <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+  <base href="public">
+  <link rel="shortcut icon" href="img/icons/icon-72x72.png">
+  <link type="text/css" href="css/materialize.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link type="text/css" href="/css/styles.css" rel="stylesheet">
-  <script type="text/javascript" src="/js/materialize.min.js"></script>
-  <link rel="manifest" href="/manifest.json">
+  <link type="text/css" href="css/styles.css" rel="stylesheet">
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <link rel="manifest" href="manifest.json">
   <!-- ios support -->
-  <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
+  <link rel="apple-touch-icon" href="img/icons/icon-96x96.png">
   <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
   <meta name="theme-color" content="#FFE1C4">
 </head>
@@ -30,17 +32,17 @@
   <!-- side nav -->
   <ul id="side-menu" class="sidenav side-menu">
     <li><a class="subheader">FOODNINJA</a></li>
-    <li><a href="/" class="waves-effect">Home</a></li>
-    <li><a href="/pages/about.html" class="waves-effect">About</a></li>
+    <li><a href="index.html" class="waves-effect">Home</a></li>
+    <li><a href="pages/about.html" class="waves-effect">About</a></li>
     <li><div class="divider"></div></li>
-    <li><a href="/pages/contact.html" class="waves-effect">
+    <li><a href="pages/contact.html" class="waves-effect">
       <i class="material-icons">mail_outline</i>Contact</a>
     </li>
   </ul>
 
   <!-- recipes -->
   <div class="recipes container grey-text text-darken-1">
-    
+
   </div>
 
   <div class="center">
@@ -68,24 +70,34 @@
     </form>
   </div>
 
-  
+
   <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-firestore.js"></script>
   <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyDuDGcpHGU-Sx1Hla3wYwZvXbjeKpHqPjA",
-      authDomain: "net-ninja-pwa.firebaseapp.com",
-      databaseURL: "https://net-ninja-pwa.firebaseio.com",
-      projectId: "net-ninja-pwa",
-      storageBucket: "net-ninja-pwa.appspot.com",
-      messagingSenderId: "1008745109838"
+    // Import the functions you need from the SDKs you need
+    // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+    // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBJx5byaKQCQI7DH43wf3LsfOkCe1ll0sw",
+      authDomain: "resto-5bf91.firebaseapp.com",
+      projectId: "resto-5bf91",
+      storageBucket: "resto-5bf91.appspot.com",
+      messagingSenderId: "319694887202",
+      appId: "1:319694887202:web:b03e2f0f0d0147779b6d7b",
+      measurementId: "G-DND6K2HM9C"
     };
-    firebase.initializeApp(config);
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
   </script>
-  <script src="/js/app.js"></script>
-  <script src="/js/db.js"></script>
-  <script src="/js/ui.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/ui.js"></script>
 </body>
 </html>
